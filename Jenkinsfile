@@ -10,7 +10,7 @@ node("applications") {
   }
   stage('sauce connect start') {
     dir('sauce-connect/scripts/deployment/sauce-connect') {
-      sh GHOSTBUSTERS_DASH_HOST=`cat address.txt`
+      sh 'GHOSTBUSTERS_DASH_HOST=`cat address.txt`'
       //python sauce_connect_start.py --tunnel-domains=${GHOSTBUSTERS_DASH_HOST} --user=${GHOSTBUSTER_SAUCE_USERNAME} --api-key=${GHOSTBUSTER_SAUCE_ACCESS_KEY}
       sh 'echo ${GHOSTBUSTERS_DASH_HOST}'
       sh 'echo ${GHOSTBUSTER_SAUCE_USERNAME}'
