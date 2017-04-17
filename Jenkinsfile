@@ -1,4 +1,4 @@
-node("applications") {
+//node("applications") {
   deleteDir()
   stage('kickwheel') {
     //checkout([$class: 'GitSCM', branches: [[name: '*/sauce-connect']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'sauce-connect']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '473f0330-96e0-4384-83d3-0610730f1fe5', url: 'git@github.com:metamx/frontend-scripts.git']]])
@@ -27,4 +27,4 @@ node("applications") {
       //sh ./scripts/docker-run-sauce
     }
   }
-}
+//}
