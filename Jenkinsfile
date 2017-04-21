@@ -1,4 +1,4 @@
-node("applications") {
+node {
   deleteDir()
 
   stage('kickwheel') {
